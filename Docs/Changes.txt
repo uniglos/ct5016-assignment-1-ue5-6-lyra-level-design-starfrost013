@@ -14,3 +14,4 @@ Core Game Changes (as part of CT5016 Level Design):
 	* Max custom speed 600 -> 775cm/s
 	* Max accel 2400 -> 3200
 * Added texture for map preview
+* Removed unused maps and assets
