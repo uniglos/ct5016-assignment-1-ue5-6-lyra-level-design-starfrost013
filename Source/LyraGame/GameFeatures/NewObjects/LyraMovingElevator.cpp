@@ -10,8 +10,9 @@ ALyraMovingElevator::ALyraMovingElevator()
 	PrimaryActorTick.bCanEverTick = true;
 #
 	box = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Box"));
-	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Sphere.sphere'")).Object;
+	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.cube'")).Object;
 	this->SetRootComponent(box);
+	box->SetStaticMesh(boxMesh);
 
 	// Don't div0 and die
 	if (Speed == 0)
