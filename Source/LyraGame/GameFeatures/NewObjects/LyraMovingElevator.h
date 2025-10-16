@@ -1,5 +1,5 @@
 // Copyright © 2025 Connor Hyde
-// Implements a pretty basic elevator.
+// Implements a pretty basic (vertical, horizontal soon?) elevator. Mostly a test to see how lyra plays with c++.
 
 #pragma once
 
