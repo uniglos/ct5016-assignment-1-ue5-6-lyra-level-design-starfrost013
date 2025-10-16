@@ -10,7 +10,7 @@ ALyraMovingElevator::ALyraMovingElevator()
 	PrimaryActorTick.bCanEverTick = true;
 #
 	box = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Box"));
-	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.Cube'")).Object;
+	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.cube'")).Object;
 
 	this->SetRootComponent(box);
 
@@ -24,7 +24,7 @@ void ALyraMovingElevator::BeginPlay()
 {
 	Super::BeginPlay();
 
-	initialHeight = GetActorLocation().Y;
+	initialHeight = GetActorLocation().Z;
 
 	finalHeight = initialHeight + HeightChange;
 	stepHeight = HeightChange / Speed;
@@ -40,16 +40,16 @@ void ALyraMovingElevator::Tick(float DeltaTime)
 	// todo: probably some epsilon stuff
 	if (down)
 	{
-		location.Y -= stepHeight;
+		location.Z -= stepHeight;
 	
-		if (location.Y <= initialHeight)
+		if (location.Z <= initialHeight)
 			down = false; 
 	}
 	else
 	{
-		location.Y += stepHeight;
+		location.Z += stepHeight;
 
-		if (location.Y >= finalHeight)
+		if (location.Z >= finalHeight)
 			down = true; 
 	}
 
