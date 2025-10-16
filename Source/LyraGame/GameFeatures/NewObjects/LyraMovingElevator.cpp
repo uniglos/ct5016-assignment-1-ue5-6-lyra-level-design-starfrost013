@@ -10,13 +10,16 @@ ALyraMovingElevator::ALyraMovingElevator()
 	PrimaryActorTick.bCanEverTick = true;
 #
 	box = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Box"));
-	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.cube'")).Object;
+	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Sphere.sphere'")).Object;
 	this->SetRootComponent(box);
 	box->SetStaticMesh(boxMesh);
 
 	// Don't div0 and die
 	if (Speed == 0)
 		Speed = 32;
+
+	if (HeightChange == 0)
+		HeightChange = 300;
 }
 
 // Called when the game starts or when spawned
