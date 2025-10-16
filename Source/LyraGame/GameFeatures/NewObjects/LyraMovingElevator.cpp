@@ -10,8 +10,7 @@ ALyraMovingElevator::ALyraMovingElevator()
 	PrimaryActorTick.bCanEverTick = true;
 #
 	box = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Box"));
-	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.cube'")).Object;
-
+	UStaticMesh* boxMesh = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Sphere.sphere'")).Object;
 	this->SetRootComponent(box);
 
 	// Don't div0 and die
@@ -40,14 +39,14 @@ void ALyraMovingElevator::Tick(float DeltaTime)
 	// todo: probably some epsilon stuff
 	if (down)
 	{
-		location.Z -= stepHeight;
+		location.Z -= (stepHeight * DeltaTime);
 	
 		if (location.Z <= initialHeight)
 			down = false; 
 	}
 	else
 	{
-		location.Z += stepHeight;
+		location.Z += (stepHeight * DeltaTime);
 
 		if (location.Z >= finalHeight)
 			down = true; 
