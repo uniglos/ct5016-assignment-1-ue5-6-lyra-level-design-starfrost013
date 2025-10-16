@@ -1,0 +1,17 @@
+Core Game Changes (as part of CT5016 Level Design):
+
+=== 16 October 2025 ===
+
+* Reduced Melee damage from 100 to 25
+* GA_Hero_Dash:
+	* Increased dash power by 25% (1850.0 to 2312.0)
+	* Clamp Velocity on Finish 1000.0 -> 1250.0
+* Character_Default:
+	* Max walk speed 600 -> 775cm/s
+	* Max crouch speed 300 -> 390cm/s
+	* Max swim speed 300 -> 390cm/s
+	* Max fly speed 600 -> 775cm/s
+	* Max custom speed 600 -> 775cm/s
+	* Max accel 2400 -> 3200
+* Added texture for map preview
+* Improvised a bug fix for being able to execute AbilitySystem.IgnoreCooldowns and AbilitySystem.IgnoreCosts!
