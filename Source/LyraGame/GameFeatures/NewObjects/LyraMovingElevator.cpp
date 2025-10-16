@@ -30,7 +30,7 @@ void ALyraMovingElevator::BeginPlay()
 	initialHeight = GetActorLocation().Z;
 
 	finalHeight = initialHeight + HeightChange;
-	stepHeight = HeightChange / Speed;
+	stepHeight = Speed / HeightChange;
 }
 
 // Called every frame
