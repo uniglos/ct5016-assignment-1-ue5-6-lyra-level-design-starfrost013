@@ -15,4 +15,15 @@ Core Game Changes (as part of CT5016 Level Design):
 	* Max accel 2400 -> 3200
 * Added texture for map preview
 * Removed unused maps and assets
-* Added an elev
+* Added an elevator C++ class.
+
+Post Playtest 1:
+=== 21 October 2025 ===
+* Changed the logo background to red.
+	* Max walk speed 775 -> 800cm/s
+	* Max crouch speed 390 -> 400cm/s
+	* Max swim speed 390 -> 400cm/s
+	* Max fly speed 775 -> 800cm/s
+	* Max custom speed 775 -> 800cm/s
+
+0.8 0.0 0.284
