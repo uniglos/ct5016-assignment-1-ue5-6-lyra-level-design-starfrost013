@@ -26,4 +26,15 @@ Post Playtest 1:
 	* Max fly speed 775 -> 800cm/s
 	* Max custom speed 775 -> 800cm/s
 
+=== 23 October 2025 ===
+* Started working on the nuke
+* Character_Default:
+	* Air Control 0.05 -> 0.5
+	* Air Control Boost Multiplier 2.0 -> 2.2
+	* Air Control Boost Velocity Threshold 25.0 -> 30.0
+	* Gravity Scale 1.0 -> 2.0
+	* Jump Z Velocity 500 -> 1000
+* Fixed bug where Character_Default Jump Z was being overridden by mannequin jumpz
+* Double Jump test
+
 0.8 0.0 0.284
