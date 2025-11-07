@@ -100,7 +100,7 @@ public class LyraGame : ModuleRules
 			PublicDefinitions.Add("WITH_HTTPSERVER_LISTENERS=1");
 		}
 
-		SetupGameplayDebuggerSupport(Target);
+        SetupGameplayDebuggerSupport(Target);
 		SetupIrisSupport(Target);
 	}
 }
