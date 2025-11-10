@@ -37,4 +37,5 @@ Post Playtest 1:
 * Fixed bug where Character_Default Jump Z was being overridden by mannequin jumpz
 * Double Jump test
 
-0.8 0.0 0.284
+=== 10 November 2025 ===
+* Tweaked Grenade a bit.
