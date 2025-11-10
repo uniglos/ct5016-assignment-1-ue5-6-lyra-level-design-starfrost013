@@ -148,6 +148,9 @@ public:
 
 	UE_API virtual bool UpdateSharedReplication();
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<ULyraHealthComponent> HealthComponent;
+
 protected:
 
 	UE_API virtual void OnAbilitySystemInitialized();
@@ -194,8 +197,7 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraPawnExtensionComponent> PawnExtComponent;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
-	TObjectPtr<ULyraHealthComponent> HealthComponent;
+
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Lyra|Character", Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<ULyraCameraComponent> CameraComponent;
