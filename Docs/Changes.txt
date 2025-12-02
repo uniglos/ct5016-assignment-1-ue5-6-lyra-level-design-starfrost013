@@ -39,3 +39,20 @@ Post Playtest 1:
 
 === 10 November 2025 ===
 * Tweaked Grenade a bit.
+
+=== 11 November 2025 ===
+* ALyraCharacter::HealthComponent now public instead or private
+* Introduced nuclear bomb weapon
+
+=== 12 November 2025 ===
+* Shotgun changes:
+	* 1.0 damage range 512 -> 1024
+	* Changed to gradual curve (0.5 -> 0.33 after 3072 units) to try to make it more obviously a close range weapon
+* Pistol:
+	* Base Damage 18.0 -> 15.0
+	* 1.0 damage 2000 -> 3072	
+	* 0.8 damage 11200 -> 6144
+	* 0.67 damage 23000 -> 12688
+	* 0.5 damage removed
+* Reduced headshot multiplier from 2.0 to 1.8 for pistol and shotgun
+* Finished nuclear bomb weapon 
